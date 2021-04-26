@@ -1,138 +1,119 @@
 @import "../tools/mixins";
 @import "../tools/variables";
 
-.loading__spinner {
-  z-index: 3;
-  animation: spin 3s forwards linear;
-  border: solid 15px transparent;
-  border-radius: 50%;
-  border-right-color: $primary-purple;
-  border-top-color: $primary-purple;
-  box-sizing: border-box;
-  height: 150px;
-  width: 150px;
-  position: fixed;
-  left: calc(50% - 75px);
-  top: calc(50% - 75px);
-  opacity: 0;
-  &::before {
-    animation: spin 3s 250ms forwards linear;
-    border: solid 15px transparent;
-    border-radius: 50%;
-    border-right-color: $secondary-pink;
-    border-top-color: $secondary-pink;
-    box-sizing: border-box;
-    content: "";
-    z-index: 3;
-    height: 120px;
-    width: 120px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    opacity: 0;
-  }
-  &::after {
-    animation: spin 3s 500ms forwards linear;
-    border: solid 15px transparent;
-    border-radius: 50%;
-    border-right-color: $tertiary-green;
-    border-top-color: $tertiary-green;
-    box-sizing: border-box;
-    content: "";
-    z-index: 3;
-    height: 90px;
-    width: 90px;
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    opacity: 0;
-  }
-}
-
 @keyframes spin {
-  5% {
-    opacity: 1;
-  }
-  25% {
-    transform: rotate(180deg);
-  }
-  75% {
-    transform: rotate(540deg);
-    opacity: 1;
-  }
-  80% {
-    transform: rotate(576deg);
-    opacity: 0.5;
-  }
-  90% {
-    transform: rotate(648deg);
-    opacity: 0;
-  }
-  100% {
-    transform: rotate(720deg);
-    opacity: 0;
-    display: none;
-  }
+	0% {
+		transform: rotate(0deg);
+		opacity: 1;
+	}
+	80% {
+		opacity: 0.5;
+	}
+	100% {
+		transform: rotate(360deg);
+		display: none;
+	}
 }
-
-.loading__back {
-  background: $color-back-dark;
-  background-size: cover;
-  width: 100%;
-  height: 250%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  opacity: 0;
-  transform-origin:top;
-  transform: scale(0);
-  animation: back 3s;
-}
-
 @keyframes back {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  60% {
-    opacity: 0.9;
-    transform: scale(1);
-  }
-  70% {
-    opacity: 0.8;
-    transform: scale(1);
-  }
-  90% {
-    opacity: 0.7;
-    transform: scale(1);
-  }100% {
-     opacity: 0;
-     transform: scale(0);
-     display: none;
-   }
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	60% {
+		opacity: 0.9;
+		transform: scale(1);
+	}
+	70% {
+		opacity: 0.8;
+		transform: scale(1);
+	}
+	90% {
+		opacity: 0.7;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(0);
+		display: none;
+	}
 }
-
-#loaded_page{
-  z-index: 3;
-  opacity: 1;
-  animation: page 2s 2s both;
-}
-
 @keyframes page {
-  0% {
-    opacity: 0.5;
-  }
-  30% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  75% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 1;
-  }
+	0% {
+		opacity: 0.5;
+	}
+	30% {
+		opacity: 0.6;
+	}
+	50% {
+		opacity: 0.6;
+	}
+	75% {
+		opacity: 0.9;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.loading__spinner {
+	z-index: 3;
+	height: 150px;
+	width: 150px;
+	position: fixed;
+	left: calc(50% - 75px);
+	top: calc(50% - 75px);
+	border-radius: 50%;
+	background: linear-gradient(#9356DC, #99E2D0, #FF79DA);
+	animation: spin 3s forwards linear;
+	opacity: 0;
+	span {
+		position: absolute;
+		z-index: 3;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		background: linear-gradient(#9356DC, #99E2D0, #FF79DA);
+		&:nth-child(1) {
+			filter: blur(5px);
+		}
+		&:nth-child(2) {
+			filter: blur(10px);
+		}
+		&:nth-child(3) {
+			filter: blur(25px);
+		}
+		&:nth-child(4) {
+			filter: blur(50px);
+		}
+	}
+	&:after {
+		content: '';
+		z-index: 3;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		background: #f1f1f1;
+		border: solid white 10px;
+		border-radius: 50%;
+	}
+}
+.loading__back {
+	background: #eaeaea;
+	background-size: cover;
+	width: 100%;
+	height: 250%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	opacity: 0;
+	transform-origin: top;
+	transform: scale(0);
+	animation: back 3s;
+}
+#loaded_page {
+	z-index: 3;
+	opacity: 1;
+	animation: page 2s 2s both;
 }
