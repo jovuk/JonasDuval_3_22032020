@@ -1,0 +1,15 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+form{
+  input{
+    background-color: $color-back-dark;
+    width: 100%;
+    padding: 20px 0;
+    border:none;
+    text-align: center;
+    font-size: 1.6em;
+    color: darken($color-back-dark, 70%);
+    @include inset-box-shadow;
+  }
+}

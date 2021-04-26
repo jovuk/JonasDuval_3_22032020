@@ -1,0 +1,132 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.menu__section {
+  margin-top: 40px;
+@include respond-to(tablet){
+  padding: 0 150px;
+}
+  @include respond-to(desktop){
+    width: 33%;
+  }
+  animation: revelation 800ms both ease-in-out;
+
+  @keyframes revelation {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  h4 {
+    font-weight: 200;
+    font-size: 1.6em;
+    margin: 20px;
+    &::after {
+      display: block;
+      content: "";
+      height: 5px;
+      width: 10%;
+      background: $tertiary-green;
+    }
+  }
+  .menu__section__details {
+    cursor: pointer;
+    background-color: white;
+    position: relative;
+    border-radius: 20px;
+    @include respond-to(desktop){
+      margin: 10px;
+    }
+    @include box-shadow($color-back-light);
+    margin: 20px 0;
+    display: flex;
+    &:hover .check {
+      width: 22%;
+      > .fa-check-circle {
+        opacity: 1;
+        animation: rotation 500ms linear;
+      }
+    }
+  }
+  .choice {
+    width: 100%;
+    padding: 0 20px;
+    margin: 0;
+    display: grid;
+    font-size: 1.3rem;
+    grid-template-rows: 60px;
+    grid-template-areas:
+        "text1 ."
+        "text2 price";
+    p {
+      display: block;
+      &:nth-child(1) {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        grid-area: text1;
+        align-self: center;
+        font-weight: 500;
+        margin: 10px 0 0 0;
+      }
+      &:nth-child(2) {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        grid-area: text2;
+        align-self: center;
+        font-weight: 200;
+        font-size: 1.2rem;
+        margin: 0 0 10px 0;
+
+      }
+      &:nth-child(3) {
+        grid-area: price;
+        align-self:start;
+        font-weight: 700;
+        display: flex;
+        font-size: 1.2rem;
+        justify-content: flex-end;
+        margin: 0;
+      }
+    }
+  }
+}
+// check
+.check {
+  transition: width 500ms linear;
+  width: 0;
+  right: 0;
+  background-color: $tertiary-green;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  justify-content: center;
+  transform-origin: right center;
+  display: flex;
+  align-items: center;
+  .fa-check-circle {
+    opacity: 0;
+    font-size: 2em;
+    @include respond-to(smartphoneXs){
+      font-size: 1.4em;
+    }
+  }
+}
+
+@keyframes rotation {
+  from {
+    z-index:1;
+    transform: rotate(0);
+  } 50% {
+      transform: rotate(180deg);
+    } to {
+        z-index:1;
+        transform: rotate(360deg);
+      }
+}
+

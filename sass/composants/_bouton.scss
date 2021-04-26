@@ -1,0 +1,22 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.btn {
+  @include respond-to(tablet){
+    @include button(40%, white, 30px,1.4em, $color-back-light);
+  }
+  @include respond-to(desktop){
+    @include button(30%, white, 30px,1.4em, $color-back-light);
+  }
+  @include button(65%, white, 30px,1.4em, $color-back-light);
+  background: linear-gradient(to bottom right, $secondary-pink 5%, $primary-purple);
+    &__a{
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+  &:hover{
+    background: linear-gradient(to bottom right, darken($secondary-pink, 15%), $primary-purple);
+    @include box-shadow($color-back-dark);
+  }
+}

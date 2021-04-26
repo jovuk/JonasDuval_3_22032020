@@ -1,0 +1,41 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.footer {
+  background: $color-footer;
+  padding-bottom: 20px;
+  &__heading {
+    font-family: $font-title;
+    color: darken($color-back-dark, 5%);
+    font-size: 1.4rem;
+    padding:20px;
+    margin-top: 0;
+  }
+  &__menu {
+    list-style-type: none;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin:0;
+    a {
+      text-decoration: none;
+      font-size: 1rem;
+      color: darken($color-back-dark, 10%);
+      &:hover {
+        color: $primary-purple;
+      }
+    }
+  }
+  &__icon {
+    @include respond-to(desktop){
+      width: 1%;
+    }
+    @include respond-to(tablet){
+      width: 2%;
+    }
+    margin-right: 10px;
+    width: 3%;
+    font-size: 1rem;
+    color: darken($color-back-dark, 5%);
+  }
+}

@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+body {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  background-color: white;
+  font-size: 0.9em;
+  font-family: "Roboto", Verdana, Trebuchet, sans-serif;
+}
+
+h1 {
+  font-size: 1.6em;
+}
+
+h2 {
+  font-size: 1.2em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+/*# sourceMappingURL=base.css.map */

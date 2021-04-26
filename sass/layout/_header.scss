@@ -1,0 +1,32 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+header {
+  text-align: center;
+  @include box-shadow($color-back-light);
+  img {
+    @include respond-to(smartphoneXs){
+      width: 40%;
+      padding: 20px;
+    }
+    @include respond-to(smartphone){
+      width: 40%;
+      padding: 20px;
+    }
+    @include respond-to(tablet){
+      width: 25%;
+      padding: 20px;
+    }
+    @include respond-to(desktop){
+      width: 20%;
+      padding: 20px;
+    }
+  }
+  i{
+    color: darken($color-back-dark, 70%);
+    font-size: 2em;
+    position: absolute;
+    top: 27px;
+    left: 8%;
+  }
+}

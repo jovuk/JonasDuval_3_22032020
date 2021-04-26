@@ -1,0 +1,105 @@
+@import "../utils/mixins";
+@import "../utils/variables";
+
+.teasing{
+  padding-bottom: 25px;
+  text-align: center;
+  background-color: $color-back-light;
+  &__heading{
+    padding: 40px 40px 10px 40px;
+    font-size: 1.8rem;
+  }
+  &__byline{
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: #807c7c;
+    padding: 0 15px;
+  }
+}
+
+.nav{
+  @include  respond-to(desktop){
+    padding: 0 90px;
+  }
+  .nav__desktop{
+    @include respond-to(desktop){
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  @include respond-to(tablet){
+    padding: 0 150px;
+  }
+  margin: 0 auto;
+  margin-bottom: 80px;
+  h2{
+    margin: 50px 0 50px 15px;
+    font-size: 2em;
+  }
+    &__infos{
+      background-color: #F5F5F6;
+      @include respond-to(desktop){
+        width: 50%;
+        margin:0 25px;
+      }
+      @include respond-to(tablet){
+        width: 80%
+      }
+      width: 75%;
+      border-radius: 25px;
+      box-shadow: 2px 4px 8px 3px #e4e4e7;
+      margin: 25px auto;
+      font-size: 1.1em;
+      @include respond-to(smartphoneXs){
+        font-size: 0.7em;
+      }
+      position: relative;
+      &:hover{
+        cursor: pointer;
+        background-color: rgba(147, 86, 220, 0.15);
+        i{
+          color: $primary-purple;
+        }
+      }
+      p{
+        position: absolute;
+        top: 10px;
+        left: -17px;
+        background: #9356DC;
+        padding: 6px 10px;
+        border-radius: 50%;
+        font-size: 1em;
+        color: #FFF;
+      }
+      i{
+        margin: 30px 20px 30px 40px;
+        color: #8a8a95;
+        font-size: 1.4em;
+      }
+      a{
+        font-size: 1.2em;
+        font-weight: 400;
+        text-decoration: none;
+        color: black;
+      }
+    }
+}
+
+.restaurants{
+  background-color: $color-back-dark;
+  h2{
+    padding: 60px 40px 10px 40px;
+    font-size: 1.8rem;
+  }
+  &__choice{
+    padding-bottom: 60px;
+    @include respond-to(desktop){
+      display: flex;
+    }
+    @include respond-to(tablet){
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}
