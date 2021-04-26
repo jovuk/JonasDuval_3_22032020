@@ -1,5 +1,5 @@
-@import "../utils/mixins";
-@import "../utils/variables";
+@import "../tools/mixins";
+@import "../tools/variables";
 
 .heart {
   position: relative;
@@ -8,7 +8,7 @@
     cursor: pointer;
     color: white;
     font-weight: 900;
-    & .heart__anim {
+    & .heart__anime {
       position: absolute;
       top: 0;
       left: 0;
@@ -19,7 +19,7 @@
     }
   }
 
-  &__anim {
+  &__anime {
     position: absolute;
     top: 0;
     left: 0;

@@ -173,7 +173,7 @@ form input {
   color: white;
   font-weight: 900;
 }
-.heart:hover .heart__anim {
+.heart:hover .heart__anime {
   position: absolute;
   top: 0;
   left: 0;
@@ -182,7 +182,7 @@ form input {
   font-weight: 900;
   transform: scale(1);
 }
-.heart__anim {
+.heart__anime {
   position: absolute;
   top: 0;
   left: 0;
