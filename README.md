@@ -16,4 +16,5 @@ Project is created with:
 * FontAwesome
 
 ## Setup
-Github Pages : 
+Github Pages : https://jovuk.github.io/JonasDuval_3_22032020/
+
