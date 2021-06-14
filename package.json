@@ -4,7 +4,7 @@
   "description": "Dynamisez une page web avec des animations CSS - Project 3",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./public/css/style.scss/style.css",
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.scss",
     "prefix": "postcss public/css/style.scss --use autoprefixer -d ./public/css/prefixed/ --style compressed"
   },
   "author": "Jonas DUVAL",
