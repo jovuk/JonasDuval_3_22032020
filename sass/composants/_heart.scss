@@ -26,9 +26,9 @@
     bottom: 0;
     right: 0;
     background: linear-gradient($secondary-pink, $primary-purple);
+    background-clip: text;
     -webkit-background-clip: text;
-            background-clip: text;
-    -webkit-text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
     opacity: 0;
     z-index: -1;
     transform: scale(0);
