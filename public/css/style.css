@@ -36,7 +36,7 @@
 body {
   box-sizing: border-box;
   width: 100%;
-  max-width: 1900px;
+  max-width: 3500px;
   margin: 0 auto;
   background-color: white;
   font-size: 0.9em;
@@ -72,7 +72,7 @@ h1 {
     font-size: 1.4em;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+@media only screen and (min-width: 1200px) and (max-width: 3500px) {
   .btn {
     margin: 30px auto;
     padding: 20px 10px;
@@ -103,7 +103,7 @@ h1 {
   margin: 20px auto;
   position: relative;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+@media only screen and (min-width: 1200px) and (max-width: 3500px) {
   .restaurants__cards {
     margin: 30px;
   }
@@ -334,7 +334,7 @@ form input {
     padding: 0 150px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+@media only screen and (min-width: 1200px) and (max-width: 3500px) {
   .menu__section {
     width: 33%;
   }
@@ -370,7 +370,7 @@ form input {
   margin: 20px 0;
   display: flex;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+@media only screen and (min-width: 1200px) and (max-width: 3500px) {
   .menu__section .menu__section__details {
     margin: 10px;
   }
@@ -491,7 +491,7 @@ form input {
   font-size: 1rem;
   color: #dddddd;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+@media only screen and (min-width: 1200px) and (max-width: 3500px) {
   .footer__icon {
     width: 1%;
   }
@@ -524,7 +524,7 @@ header {
     padding: 20px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+@media only screen and (min-width: 1200px) and (max-width: 3500px) {
   header img {
     width: 20%;
     padding: 20px;
@@ -558,12 +558,12 @@ header i {
   margin: 0 auto;
   margin-bottom: 80px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+@media only screen and (min-width: 1200px) and (max-width: 3500px) {
   .nav {
     padding: 0 90px;
   }
 }
-@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+@media only screen and (min-width: 1200px) and (max-width: 3500px) {
   .nav .nav__desktop {
     display: flex;
     justify-content: space-between;
@@ -587,7 +587,7 @@ header i {
   font-size: 1.1em;
   position: relative;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+@media only screen and (min-width: 1200px) and (max-width: 3500px) {
   .nav__details {
     width: 50%;
     margin: 0 25px;
@@ -642,7 +642,7 @@ header i {
 .restaurants__choice {
   padding-bottom: 60px;
 }
-@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+@media only screen and (min-width: 1200px) and (max-width: 3500px) {
   .restaurants__choice {
     display: flex;
   }
@@ -655,7 +655,7 @@ header i {
   }
 }
 
-@media only screen and (min-width: 1200px) and (max-width: 1900px) {
+@media only screen and (min-width: 1200px) and (max-width: 3500px) {
   .display_desktop {
     display: flex;
     justify-content: space-around;
